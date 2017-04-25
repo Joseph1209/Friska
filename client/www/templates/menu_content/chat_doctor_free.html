@@ -1,0 +1,34 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="chatContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="right">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Select Doctor!</h1>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <div ng-repeat="doctor in doctors track by $index" class="row responsive-sm" ng-if="$index % 2 == 0">
+                <ion-item class="col-50" ng-repeat="i in [$index, $index + 1]" ng-if="doctors[i] != null" href="#/chat/detail_chat/{{::doctors[i].id}}" menu-close>
+                    <div class="item-thumbnail-left">
+                        <img ng-src="{{::doctor.image}}">
+                        <h2>{{::doctors[i].title}}</h2>
+                        <p>{{::doctors[i].short_description}}</p>
+                        <p>
+                            <i class="icon ion-star" ng-repeat="i in getNumber(doctors[i].rating) track by $index"></i>
+                        </p>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

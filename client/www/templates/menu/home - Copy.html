@@ -1,0 +1,53 @@
+<ion-view view-title="Home" hide-back-button="true">
+    <ion-content>
+        <ion-list>
+            <!--<div ng-repeat="book in books track by $index" class="row responsive-sm" ng-if="$index % 2 == 0">
+                <ion-item class="col-50" ng-repeat="i in [$index, $index + 1]" ng-if="books[i] != null" ng-href="#/app/book/{{::books[i]._id}}">
+                    <div class="item-thumbnail-left">
+                        <img ng-src="{{::book.image}}">
+                        <h2>{{::books[i].title}}</h2>
+                        <p>{{::books[i].short_description}}</p>
+                        <p>
+                            <i class="icon ion-star" ng-repeat="i in getNumber(books[i].rating) track by $index"></i>
+                        </p>
+                    </div>
+                </ion-item>
+            </div>
+
+            <img ng-src="img/ic_category_chat.png" style="width: 5%;">-->
+            <div class="row" style="padding: 50px;">
+                <div class="col-40">
+                        <img ng-src="img/ic_category_chat.png" align="right" style="width: 100%;">
+                        <p align="center" style="color: red; font-size: 10px;">Chat with Doctor for Free</p>
+                </div>
+                <div class="col-20"></div>
+                <div class="col-40">
+                        <img ng-src="img/ic_category_lab.png" align="left" style="width: 100%;">
+                        <p align="center" style="color: red; font-size: 10px;">Lab tests</p>
+                </div>
+            </div>
+            <div class="row" style="padding: 50px; padding-top: 0px;">
+                <div class="col-40">
+                        <img ng-src="img/ic_category_nurse.png" align="right" style="width: 100%;">
+                        <p align="center" style="color: red; font-size: 10px;">Home Nursing</p>
+                </div>
+                <div class="col-20"></div>
+                <div class="col-40">
+                        <img ng-src="img/ic_category_visit.png" align="left" style="width: 100%;">
+                        <p align="center" style="color: red; font-size: 10px;">Doctor Home Visit</p>
+                </div>
+            </div>
+            <div class="row" style="padding: 50px; padding-top: 0px;">
+                <div class="col-40">
+                        <img ng-src="img/ic_category_medicine.png" align="left" style="width: 100%;">
+                        <p align="center" style="color: red; font-size: 10px;">Medicine Delivery</p>
+                </div>
+                <div class="col-20"></div>
+                <div class="col-40">
+                        <img ng-src="img/ic_category_camera.png" align="right" style="width: 100%;">
+                        <p align="center" style="color: red; font-size: 10px;">Vidoe Call with Doctor</p>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

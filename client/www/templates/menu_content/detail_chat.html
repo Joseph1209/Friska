@@ -1,0 +1,28 @@
+<ion-view view-title="Chat with Doctor for Free" hide-back-button="true">
+    <ion-content>
+        <div class = "List card">
+            <div class="item">
+                <div class="item-thumbnail-left">
+                    <img ng-src="{{::chat_doctor.image}}">
+                    <h2>{{::chat_doctor.title}}</h2>
+                    <p>{{::chat_doctor.short_description}}</p>
+                    <p>
+                        <i class="icon ion-star" ng-repeat="i in getNumber(chat_doctor.rating) track by $index"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div ng-repeat="message in messages">
+                    <p ng-hide="show_con" style="color: red; font-size: 11px;">{{::message.name}}</p>
+                    <p ng-show="show_con" style="color: blue; font-size: 11px;">{{::message.name}}</p>
+                    <p style="color: black; font-size: 14px; white-space: pre-wrap;">{{::message.text}}</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar-footer bar-calm">
+        <button class="button button-clear ion-android-attach button-light" style="margin-right: 5px; font-size: 30px;" ng-click = "attach()"></button>
+        <textarea rows="5" cols="40" id="inputMessage"></textarea> 
+        <button class="button ion-android-send button-balanced" style="margin-left: 5px; font-size: 30px;" ng-click = "send_chat()"></button>
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,90 @@
+<ion-view>
+    <div class="tabs-striped tabs-background-calm tabs-color-light" ng-hide="viewFogot">
+        <div class="tabs" style="background: none;" ng-show="viewBack">
+            <a class="tab-item" ng-class="{active : false}" href="javascript:" ng-click="switchTab('login')">
+                <i class="icon ion-locked"></i> Login
+            </a>
+            <a class="tab-item" ng-class="{active : false}" href="javascript:" ng-click="switchTab('register')">
+                <i class="icon ion-person-add"></i> Register
+            </a>
+        </div>
+    </div>
+    <ion-pane style="background: url('img/ic_feature_doctor.png'); background-size: cover;" ng-show="viewBack"></ion-pane>
+    <ion-pane ng-hide="viewBack">
+        <ion-header-bar align-title="center" class="bar-calm">
+            <button class="button button-clear ion-ios-arrow-back" ng-hide="viewFogot" ng-click="back_start()" style="font-size: 25px;" type="submit"></button>
+            <h1 class="title">Login</h1>
+            <div class="buttons" ng-show="viewFogot">
+                <button class="button button-calm" ng-click="hide()">Close</button>
+            </div>
+        </ion-header-bar>
+        <ion-content>
+            <form>
+                <div class="list">
+                    <div class="item item-divider" align="center"><img ng-src="img/ic_logo.png" style="width: 85%;"></div>
+                    <label class="item item-input item-floating-label" ng-show="viewFogot">
+                        <span class="input-label" style="color: red;">Reset Code</span>
+                        <input type="text" placeholder="Reset Code" ng-model="fcode.verifystring">
+                    </label>
+                    <label class="item item-input item-floating-label" ng-hide="viewFogot">
+                        <span class="input-label" style="color: red;">PhoneNumber</span>
+                        <input type="number" placeholder="PhoneNumber" ng-model="user.phonenumber">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label" style="color: red;">Password(At least 4 characters)</span>
+                        <input type="password" ng-minlength="4" placeholder="Password(At least 4 characters)" ng-model="user.password">
+                    </label>
+                    <label class="item item-input item-floating-label" ng-show="viewFogot">
+                        <span class="input-label" style="color: red;">Confirm Password</span>
+                        <input type="password" ng-minlength="4" placeholder="Confirm Password" ng-model="confirmpassword">
+                    </label>
+                    <a href="" ng-click="prompt_fog()" style="color: green;" ng-hide="viewFogot">Fogot Password?</a>
+                    <br><br>
+                    <div align="center">
+                        <button class="button button-calm" style="width: 80%;" ng-hide="viewFogot" ng-click="login()" ng-disabled="!user.phonenumber || !user.password" type="submit">Log in</button>
+                        <button class="button button-calm" style="width: 80%;" ng-show="viewFogot" ng-click="send_new()" ng-disabled="!fcode.verifystring || !user.password || !confirmpassword || !(user.password === confirmpassword)" type="submit">OK</button>
+                    </div>
+                </div>
+            </form>
+        </ion-content>
+    </ion-pane>
+    <!-- register pane -->
+    <ion-pane ng-hide="viewBack" ng-if="!viewLogin">
+        <ion-header-bar align-title="center" class="bar-calm">
+        <button class="button button-clear ion-ios-arrow-back" ng-click="back_start()" style="font-size: 25px;" type="submit"></button>
+            <h1 class="title">Register</h1>
+        </ion-header-bar>
+        <ion-content>
+            <form>
+                <div class="list">
+                    <div class="item item-divider" align="center"><img ng-src="img/ic_logo.png" style="width: 85%;"></div>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label" style="color: red;">Name</span>
+                        <input type="text" placeholder="Name" ng-model="user.name">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label" style="color: red;">PhoneNumber</span>
+                        <input type="number" placeholder="PhoneNumber" ng-model="user.phonenumber">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label" style="color: red;">Email Address(ex:KHC0202@pt.net.kp)</span>
+                        <input type="email" placeholder="Email Address(ex:KHC0202@pt.net.kp)" ng-model="user.email">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label" style="color: red;">Password(At least 4 characters)</span>
+                        <input type="password" placeholder="Password(At least 4 characters)" ng-minlength="4" ng-model="user.password">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label" style="color: red;">Confirm Password</span>
+                        <input type="password" placeholder="Confirm Password" ng-minlength="4" ng-model="confirmpassword">
+                    </label>
+                    <br>
+                    <br>
+                    <div align="center">
+                        <button class="button button-calm" ng-click="register()" style="width: 80%;" ng-disabled="!user.name || !user.phonenumber || !user.email || !user.password || !confirmpassword || !(user.password === confirmpassword)" type="submit" type="submit">Register</button>
+                    </div>
+                </div>
+            </form>
+        </ion-content>
+    </ion-pane>
+</ion-view>

@@ -1,0 +1,147 @@
+<ion-view>
+    <ion-pane>
+        <ion-header-bar>
+            <h1 class="title">Profile</h1>
+        </ion-header-bar>
+        <ion-content>
+            <form>
+                <div class="list card">
+                    <div class="item item-divider" align="center">
+                        <img ng-src="img/ic_placeholder_profile_picture.png" style="width: 55%;">
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_name.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="text" ng-model="prof.name" placeholder="Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_phone.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="number" ng-model="prof.phonenumber" placeholder="Phonenumber">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_address.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="text" ng-model="prof.address" placeholder="Address">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="text" ng-model="prof.street" placeholder="Street">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="number" ng-model="prof.zipcode" placeholder="ZIP Code">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-50 col-center">
+                                <p>City</p>
+                                <select ng-model="prof.city" >
+                                    <option>{{::prof.city}}</option>
+                                    <option>Guntur</option>
+                                    <option>Vijayawada</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <p>District</p>
+                                <select ng-model="prof.district">
+                                    <option>{{::prof.district}}</option>
+                                    <option>Krishna</option>
+                                    <option>Guntur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <p>State</p>
+                                <select ng-model="prof.state">
+                                    <option>{{::prof.state}}</option>
+                                    <option>Andhra Pradesh</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <p>Country</p>
+                                <select ng-model="prof.country">
+                                    <option>{{::prof.country}}</option>
+                                    <option>India</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_email.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="email" ng-model="prof.email" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_age.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="text" ng-model="prof.birthday" placeholder="Birthday">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div align="center">
+                    <button class="button button-block button-assertive" ng-click="save_profile()" ng-disabled="!prof.name || !prof.phonenumber || !prof.email || !prof.birthday" style="width: 80%;" type="submit">Save</button>
+                </div>
+            </form>
+        </ion-content>
+    </ion-pane>
+</ion-view>

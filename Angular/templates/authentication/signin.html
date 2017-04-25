@@ -1,0 +1,56 @@
+	<div class="signin_wrapper">
+		<div class="row">
+			<div class="right_block">
+				<div class="row">
+					<form class="col-md-12 col-sm-12 col-xs-12">
+						<h2 class="signup-heading">Signin</h2>
+						<div class="row">
+							<div class="input-field col-md-12 col-sm-12 col-xs-12">
+								<i class="ion-coffee prefix"></i>
+								<input id="icon_prefix-2" name="icon_prefix-2" type="text" class="validate" ng-model="user_account.name">
+								<label for="icon_prefix-2">Username</label>
+							</div>
+							<div class="input-field col-md-12 col-sm-12 col-xs-12">
+								<i class="ion-key prefix"></i>
+								<input id="icon_prefix-3" type="password" class="validate" ng-model="user_account.password">
+								<label for="icon_prefix-3">Password</label>
+							</div>
+						</div>
+						<div class="bottom_info">
+							<a href="#" class="pull-right" data-toggle="modal" data-target="#forgot">forgot password?</a>
+							<a href="#/auth/signup" class="pull-left">Register new account</a>
+						</div>
+						<div class="clearfix"></div>
+<!-- 						<a href="index.html" class="btn btn-primary btn-block">Sign in</a>
+ -->						<button class="btn btn-primary btn-block" ng-click="Signin()">Sign in</a>
+					</form>
+				</div>                
+			</div>
+			<!-- right_block -->
+		</div>
+		<!-- row -->
+
+
+		<!-- Modal -->
+		<!-- <div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel"><i class="ion-android-settings"></i> Reset password</h4>
+					</div>
+					<div class="modal-body">
+						<div class="col-sm-12">
+							<input type="text" class="form-control" placeholder="Enter Email here">
+							<h6 class="note"><i class="ion-android-mail"></i> password will be sent to your email</h6>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Send</button>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- modal -->
+	</div>

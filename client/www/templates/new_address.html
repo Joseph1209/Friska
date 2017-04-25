@@ -1,0 +1,91 @@
+<ion-view>
+    <ion-pane>
+        <ion-header-bar>
+            <a class="button button-clear ion-ios-arrow-back" href="#/visit" style="font-size: 25px;" type="submit"></a>
+            <h1 class="title">New Address</h1>
+        </ion-header-bar>
+        <ion-content>
+            <form>
+                <div class="list card">
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_address.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="text" ng-model="user.newaddress" placeholder="New Address">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="text" ng-model="user.newstreet" placeholder="New Street">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-50 col-center">
+                                <p>City</p>
+                                <select>
+                                    <option selected="true">Guntur</option>
+                                    <option>Vijayawada</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <p>District</p>
+                                <select>
+                                    <option selected="true">Krishna</option>
+                                    <option>Guntur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <p>State</p>
+                                <select>
+                                    <option selected="true">Andhra Pradesh</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_empty.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <p>Country</p>
+                                <select>
+                                    <option selected>India</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div align="center">
+                    <a class="button button-block button-assertive" href="#/appointment_date" ng-disabled="!user.newaddress || !user.newstreet" style="width: 80%;" type="submit">Proceed</a>
+                </div>
+            </form>
+        </ion-content>
+    </ion-pane>
+</ion-view>

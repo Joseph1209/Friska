@@ -1,0 +1,89 @@
+<ion-view>
+    <ion-pane>
+        <ion-header-bar>
+            <a class="button button-clear ion-ios-arrow-back" href="#/visit" style="font-size: 25px;" type="submit"></a>
+            <h1 class="title">Appointment Date</h1>
+            <a class="button button-clear ion-checkmark" href="#/visit_pay"  style="font-size: 25px;" type="submit"></a>
+        </ion-header-bar>
+        <ion-content>
+            <form>
+                <div class="list card">
+                    <div class="item item-divider" style="background: url('img/time.png'); background-size: cover; height: 180px;">
+                        <br><br>
+                        <div style="background-color: white; opacity: 0.3; height: 90px; padding: 10px;" align="center">
+                            <p style="color: black; font-size: 30px; height: 175px; white-space: pre-wrap; line-height: 100%; opacity: 1;">Specify the time you want doctor's visiting.</p>
+                        </div>
+                    </div>
+                    <div class="item item-input">
+                        <div class="row">
+                            <div class="col-20">
+                                <img src="img/ic_date.png" align="center" style="width: 100%;">
+                            </div>
+                            <div class="col-80 col-center">
+                                <input type="date" ng-model="date" placeholder="Date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-divider item-stable">
+                        Morning
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <ion-radio  ng-model="appointment.time">8 a.m</ion-radio>
+                        </div>
+                        <div class="col">
+                            <ion-radio ng-model="appointment.time">9 a.m</ion-radio>
+                        </div>
+                        <div class="col">
+                            <ion-radio ng-model="appointment.time">10 a.m</ion-radio>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-33">
+                            <ion-radio ng-model="appointment.time">11 a.m</ion-radio>
+                        </div>
+                        <div class="col-33">
+                            <ion-radio ng-model="appointment.time">12 a.m</ion-radio>
+                        </div>
+                    </div>
+                    <div class="item item-divider item-stable">
+                        Afternoon
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <ion-radio ng-model="appointment.time">1 p.m</ion-radio>
+                        </div>
+                        <div class="col">
+                            <ion-radio ng-model="appointment.time">2 p.m</ion-radio>
+                        </div>
+                        <div class="col">
+                            <ion-radio ng-model="appointment.time">3 p.m</ion-radio>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-33">
+                            <ion-radio ng-model="appointment.time">4 p.m</ion-radio>
+                        </div>
+                        <div class="col-33">
+                            <ion-radio ng-model="appointment.time">5 p.m</ion-radio>
+                        </div>
+                    </div>
+                    <div class="item item-divider item-stable">
+                        Evening
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <ion-radio ng-model="appointment.time">6 p.m</ion-radio>
+                        </div>
+                        <div class="col">
+                            <ion-radio ng-model="appointment.time">7 p.m</ion-radio>
+                        </div>
+                        <div class="col">
+                            <ion-radio ng-model="appointment.time">8 p.m</ion-radio>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </ion-content>
+    </ion-pane>
+</ion-view>
